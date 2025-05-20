@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<!--
+==========================================================================
+PORTFOLIO WEBSITE MAINTENANCE GUIDE - HTML
+==========================================================================
+
+This HTML file contains the structure and content for Prof. Manish Raj's
+portfolio website. Below is a guide to help you understand and modify
+different sections.
+
+TABLE OF CONTENTS:
+1. Header/Navigation (line ~27)
+2. Main Banner/Profile (line ~60)
+3. About Section (line ~107)
+4. Education Section (line ~140)
+5. Experience Section (line ~350)
+6. Research Section (line ~472)
+7. Publications Section (line ~549)
+8. Patents Section (line ~1178)
+9. Teaching Section (line ~1292)
+10. Contact Section (line ~1503)
+11. Footer (line ~1606)
+
+HOW TO MODIFY SPECIFIC SECTIONS:
+--------------------------------
+
+ADDING/UPDATING PROFILE INFORMATION:
+- Main banner: Update text in the section starting with "Main Banner Area"
+- About section: Update professional objective and contact info
+
+UPDATING EDUCATION:
+- To add a new education entry: Copy an existing education-item div and update content
+- To add an achievement: Copy an existing achievement-card div and update content
+
+MODIFYING EXPERIENCE:
+- To add a position: Copy an existing timeline-item div and update content
+- To update responsibilities: Modify the spans within timeline-responsibilities div
+
+UPDATING RESEARCH:
+- Research interests: Update list items in the research-list ul
+- Research projects: Update content in the project-item divs
+
+MANAGING PUBLICATIONS:
+- Journal publications: Add entries to the appropriate pub-container div
+- Conference publications: Add entries to the appropriate accordion section
+- Book chapters: Add entries to the book section pub-container
+
+ADDING PATENTS:
+- Copy an existing patent-item div and update content
+
+UPDATING TEACHING:
+- Courses: Add rows to the courses-table
+- PhD Guidance: Add entries to the guidance-list div
+- Teaching images: Update src attributes in the teaching-image-card divs
+
+CHANGING CONTACT INFO:
+- Update text in the contact-text divs
+- Update links for professional profiles
+
+WORKING WITH IMAGES:
+- Place images in the img/ directory
+- Update src attributes in img tags
+==========================================================================
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prof. Manish Raj - Academic Portfolio</title>
+  <meta name="description" content="Prof. Manish Raj - Academic Portfolio" />
+  <meta name="author" content="Manish Raj" />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/animated.css" />
+</head>
+<body class="preload">
+  <!-- ***** Header / Navbar ***** -->
+  <!--
+  HEADER/NAVIGATION SECTION
+  -------------------------
+  How to modify:
+  1. To add a new navigation item, copy an existing <li class="nav-item"> element
+  2. Update the href attribute to point to the correct section ID
+  3. Update the text content to match the section name
+  4. Make sure the section ID exists in the page
+  -->
+  <header>
+    <!-- Use navbar-dark to ensure proper toggler appearance on dark backgrounds -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#top">
+          <span class="logo-text">Prof. Manish Raj</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+            <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="#patents">Patents</a></li>
+            <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ***** Main Banner Area ***** -->
+  <!--
+  MAIN BANNER/PROFILE SECTION
+  --------------------------
+  How to modify:
+  1. Update profile information in the text section (left side)
+  2. Change the name in the animated-name span
+  3. Update the title and university information
+  4. Modify skill badges in the banner-skills div
+  5. Replace the profile image by updating the src attribute
+  -->
+  <div id="top" class="main-banner">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Text Section (Left Side) -->
+        <div class="col-lg-6">
+          <h6 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s"
+              style="text-transform: uppercase; color: #1d3557; font-size: 22px; font-weight: 700; letter-spacing: 2px;">
+            Welcome to My Portfolio
+          </h6>
+          <h2 class="banner-title wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+            <span>I'm</span>
+            <span id="animated-name">
+              <span>Manish Raj</span>
+              <span>मनीष राज</span>
+            </span>
+          </h2>
+          <p class="wow fadeInLeft dark-text" data-wow-duration="1s" data-wow-delay="0.7s">
+            <span style="color: #1d3557; font-weight: bold;">Assistant Dean Academics and Evaluations</span>
+          </p>
+          <p class="wow fadeInLeft dark-text" data-wow-duration="1s" data-wow-delay="0.9s">
+            School of Computer Science Engineering & Technology, Bennett University, Greater Noida
+          </p>
+
+          <!-- Skill Highlights -->
+          <div class="banner-skills wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1.1s">
+            <span class="banner-skill-badge">AI</span>
+            <span class="banner-skill-badge">Robotics</span>
+            <span class="banner-skill-badge">Academic Leadership</span>
+            <span class="banner-skill-badge">Research</span>
+          </div>
+
+          <a href="#contact" class="btn btn-primary wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
+            Contact Me
+          </a>
+        </div>
+        <!-- Image Section (Right Side) -->
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="profile-image-container">
+            <img id="mainProfilePic" src="img/profile.jpeg" alt="Prof. Manish Raj" class="banner-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** End Main Banner ***** -->
+
+  <!-- ***** About Section ***** -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+          About Me
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          Academic Leader • Researcher • Innovator
+        </p>
+      </div>
+      <div class="about-card-wrapper wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+        <div class="about-card">
+          <div class="about-image">
+            <img src="img/about.jpeg" alt="Prof. Manish Raj" class="img-fluid">
+          </div>
+          <div class="about-info">
+            <h3>Professional Objective</h3>
+            <p>
+              To lead the School of Computer Science as Dean by leveraging academic leadership, innovative curriculum design, and research expertise. Aims to foster academic excellence, industry collaboration, and cutting-edge research to elevate the institution's global reputation and advance education and research.
+            </p>
+            <div class="contact-info-brief">
+              <p><i class="fas fa-envelope"></i> manish.raj@bennett.edu.in, rajmanish.03@gmail.com</p>
+              <p><i class="fas fa-phone"></i> +91-9026922298</p>
+            </div>
+            <a href="#contact" class="btn about-cta">Let's Connect</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** End About Section ***** -->
+
+  <!-- ***** Education Section ***** -->
+  <!--
+  EDUCATION SECTION
+  ----------------
+  How to modify:
+  1. To add a new education entry:
+     - Copy an existing education-item div
+     - Update the icon, year, degree, school, score, and details
+  2. To add a new achievement:
+     - Copy an existing achievement-card div
+     - Update the icon, title, and description
+  3. Maintain the chronological order (newest first)
+  -->
+  <section id="education" class="education section bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+          Education
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          Academic Qualifications and Achievements
+        </p>
+      </div>
+
+      <!-- Modern Education Timeline -->
+      <div class="education-timeline wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+        <!-- PhD -->
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="education-content">
+            <div class="education-year">2017</div>
+            <h3 class="education-degree">Ph.D.</h3>
+            <div class="education-school">
+              <i class="fas fa-university"></i> IIIT Allahabad
+            </div>
+            <div class="education-score">
+              <div class="score-label">Score:</div>
+              <div class="score-value">10 (Awarded)</div>
+            </div>
+            <div class="education-details">
+              <p>Specialized in Robotics and Artificial Intelligence with focus on Humanoid Locomotion</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- M.Tech -->
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="education-content">
+            <div class="education-year">2011-2013</div>
+            <h3 class="education-degree">M.Tech.</h3>
+            <div class="education-school">
+              <i class="fas fa-university"></i> IIIT Allahabad
+            </div>
+            <div class="education-score">
+              <div class="score-label">Score:</div>
+              <div class="score-value">9.40 (Bronze Medal)</div>
+            </div>
+            <div class="education-details">
+              <p>Advanced studies in Computer Science with specialization in Intelligent Systems</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- B.Tech -->
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="education-content">
+            <div class="education-year">2006-2010</div>
+            <h3 class="education-degree">B.Tech.</h3>
+            <div class="education-school">
+              <i class="fas fa-university"></i> UPTU, Lucknow
+            </div>
+            <div class="education-score">
+              <div class="score-label">Score:</div>
+              <div class="score-value">71.5%</div>
+            </div>
+            <div class="education-details">
+              <p>Undergraduate studies in Computer Science and Engineering</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Intermediate -->
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="education-content">
+            <div class="education-year">2004</div>
+            <h3 class="education-degree">Intermediate</h3>
+            <div class="education-school">
+              <i class="fas fa-building"></i> UP Board
+            </div>
+            <div class="education-score">
+              <div class="score-label">Score:</div>
+              <div class="score-value">80.00% (21st Rank in UP)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- High School -->
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <div class="education-content">
+            <div class="education-year">2002</div>
+            <h3 class="education-degree">High School</h3>
+            <div class="education-school">
+              <i class="fas fa-building"></i> UP Board
+            </div>
+            <div class="education-score">
+              <div class="score-label">Score:</div>
+              <div class="score-value">83.16% (5th Rank in UP)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Academic Achievements Section -->
+      <div class="row mt-5">
+        <div class="col-md-12">
+          <h3 class="achievements-title text-center wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.9s">
+            Academic Achievements & Awards
+          </h3>
+
+          <div class="achievements-container wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.1s">
+            <div class="row">
+              <div class="col-md-6 col-lg-3">
+                <div class="achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fas fa-medal"></i>
+                  </div>
+                  <h4>CSIR Scholarship</h4>
+                  <p>Human Resource Department of India</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fas fa-medal"></i>
+                  </div>
+                  <h4>Hinduja Foundation</h4>
+                  <p>Scholarship from Mumbai</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fas fa-medal"></i>
+                  </div>
+                  <h4>MHRD Scholarship</h4>
+                  <p>Ministry of Human Resource Development, India</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                  </div>
+                  <h4>Governor's Award</h4>
+                  <p>Award by Governor of U.P.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fas fa-trophy"></i>
+                  </div>
+                  <h4>Education Ministry Award</h4>
+                  <p>Award by Education Ministry of U.P.</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fas fa-certificate"></i>
+                  </div>
+                  <h4>UN Information Test</h4>
+                  <p>United Schools Organisation of India, Est. 1951</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <h4>CSIR Program</h4>
+                  <p>Youth for Leadership in Science (CPYLS)</p>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-lg-3">
+                <div class="achievement-card">
+                  <div class="achievement-icon">
+                    <i class="fas fa-globe-asia"></i>
+                  </div>
+                  <h4>Global Technology Summit</h4>
+                  <p>Technology Platform 2012 (Partner Country: South Korea)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** End Education Section ***** -->
+
+  <!-- ***** Experience Section ***** -->
+  <section id="experience" class="experience section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+          Professional Experience
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          Academic Leadership and Teaching Experience
+        </p>
+      </div>
+
+      <!-- Interactive Experience Image -->
+      <div class="row mb-5">
+        <div class="col-md-8 mx-auto wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          <div class="experience-image-card">
+            <img src="img/interactive.jpeg" alt="Prof. Manish Raj Interactive Session" class="img-fluid rounded">
+            <div class="image-caption">
+              <span>Interactive Session with Industry Experts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+        <!-- Current Position -->
+        <div class="timeline-item">
+          <div class="timeline-badge">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Assistant Dean (Academics and Evaluations)</h4>
+              <p class="timeline-subtitle">Bennett University, Greater Noida</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2021 - Present</p>
+            </div>
+            <div class="timeline-body">
+              <p>Directing academic operations for undergraduate and postgraduate programs. Developing strategic plans for curriculum modernization aligned with AI and emerging technologies.</p>
+              <div class="timeline-responsibilities">
+                <span class="responsibility-badge">Academic Leadership</span>
+                <span class="responsibility-badge">Evaluation Management</span>
+                <span class="responsibility-badge">Policy & Governance</span>
+                <span class="responsibility-badge">NAAC Accreditation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialization Roles -->
+        <div class="timeline-item">
+          <div class="timeline-badge">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Specialization Head - Artificial Intelligence</h4>
+              <p class="timeline-subtitle">Bennett University, Greater Noida</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2021 - Present</p>
+            </div>
+            <div class="timeline-body">
+              <p>Leading the AI specialization track, developing curriculum, and guiding students in cutting-edge AI research and projects.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Teaching Experience -->
+        <div class="timeline-item">
+          <div class="timeline-badge">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Associate Professor</h4>
+              <p class="timeline-subtitle">School of Computer Science Engineering & Technology, Bennett University</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt"></i> Jul 2022 - Present</p>
+            </div>
+            <div class="timeline-body">
+              <p>Teaching advanced courses in AI, Machine Learning, and Computer Science. Conducting research and guiding student projects.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Assistant Professor</h4>
+              <p class="timeline-subtitle">School of Computer Science Engineering & Technology, Bennett University</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt"></i> Aug 2020 - Jun 2022</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-badge">
+            <i class="fas fa-chalkboard-teacher"></i>
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4 class="timeline-title">Previous Academic Positions</h4>
+              <p class="timeline-subtitle">Various Institutions</p>
+              <p class="timeline-date"><i class="far fa-calendar-alt"></i> 2011 - 2020</p>
+            </div>
+            <div class="timeline-body">
+              <ul class="timeline-list">
+                <li>Assistant Professor, Dept. of Computer Science and Application, GLA University, Mathura (Jul 2019 - Aug 2020)</li>
+                <li>Assistant Professor, Dept. of Mechatronics, Centre for Advanced Studies, AKTU, Lucknow (Jan 2019 - Jul 2019)</li>
+                <li>Assistant Professor, School of Automation, Banasthali Vidyapith, Jaipur (Jun 2017 - Dec 2018)</li>
+                <li>Research Fellow, Dept. of Robotics & AI, IIIT Allahabad (Jan 2014 - Jun 2017)</li>
+                <li>Project/Research Assistant, Dept. of Robotics & AI, IIIT Allahabad (Jun 2013 - Dec 2013)</li>
+                <li>Teaching Assistant, Dept. of Robotics & AI, IIIT Allahabad (Jul 2011 - Jun 2013)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** End Experience Section ***** -->
+
+  <!-- ***** Research Section ***** -->
+  <section id="research" class="research section bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+          Research
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          Research Interests and Contributions
+        </p>
+      </div>
+
+      <!-- Research Images Gallery Removed as Requested -->
+
+      <div class="row">
+        <div class="col-md-6 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.7s">
+          <div class="research-card">
+            <div class="research-icon">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h3>Research Interests</h3>
+            <ul class="research-list">
+              <li>Artificial Intelligence and Machine Learning</li>
+              <li>Robotics and Humanoid Locomotion</li>
+              <li>Biped Humanoid Robot Control</li>
+              <li>Neural Networks and Deep Learning</li>
+              <li>Blockchain-based Authentication Systems</li>
+              <li>IoT and Smart Systems</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-6 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.7s">
+          <div class="research-card">
+            <div class="research-icon">
+              <i class="fas fa-project-diagram"></i>
+            </div>
+            <h3>Research Projects</h3>
+            <div class="project-item">
+              <h4>Developing Assistive Humanoid Robot</h4>
+              <p><strong>SEED Grant from Bennett University</strong> (₹9.62 Lakhs, Principal Investigator, Granted)</p>
+              <p>Research focused on developing humanoid robots for assistive technologies and applications.</p>
+            </div>
+            <div class="project-item">
+              <h4>Industry Consultancy</h4>
+              <p><strong>Soulverse Inc.</strong>, 7306 Roslindale Trail, Kalamazoo, MI - 49009, USA: ₹4.5 Lakhs (2024–25)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-md-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.9s">
+          <div class="research-card">
+            <div class="research-icon">
+              <i class="fas fa-id-card"></i>
+            </div>
+            <h3>Research IDs</h3>
+            <div class="research-ids">
+              <div class="research-id-item">
+                <span class="id-label">Scopus Author ID:</span>
+                <span class="id-value">57216789378</span>
+              </div>
+              <div class="research-id-item">
+                <span class="id-label">ResearcherID:</span>
+                <span class="id-value">I-5943-2016</span>
+              </div>
+              <div class="research-id-item">
+                <span class="id-label">SciProfiles:</span>
+                <span class="id-value">2069076</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** End Research Section ***** -->
+
+  <!-- ***** Publications Section ***** -->
+  <!--
+  PUBLICATIONS SECTION
+  -------------------
+  How to modify:
+  1. Journal Publications:
+     - To add a visible publication: Copy an existing pub-card div within the first pub-container
+     - To add a hidden publication: Copy an existing pub-card div within the hidden-pubs container
+     - Update the year, title, authors, journal, and impact factor
+
+  2. Conference Publications:
+     - Find the appropriate year accordion (e.g., conf-content-2024)
+     - Copy an existing pub-card div within that accordion's pub-container
+     - Update the title, authors, conference name, and DOI
+     - To add a new year: Copy an entire accordion section and update the year in IDs and text
+
+  3. Book Chapters:
+     - Copy an existing pub-card div within the book section's pub-container
+     - Update the title, authors, book details, and publisher
+
+  4. Publication Counts:
+     - Update the counts in the filter buttons and section titles
+  -->
+  <section id="publications" class="publications section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+          Publications
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          Journal Articles, Conference Papers, and Book Chapters
+        </p>
+      </div>
+
+      <!-- Publication Filters -->
+      <div class="d-flex justify-content-between align-items-center flex-wrap mb-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+        <div class="publication-filters">
+          <button class="filter-btn active" data-filter="all">All <span class="pub-count">40+</span></button>
+          <button class="filter-btn" data-filter="journal">Journals <span class="pub-count">18</span></button>
+          <button class="filter-btn" data-filter="conference">Conferences <span class="pub-count">22</span></button>
+          <button class="filter-btn" data-filter="book">Book Chapters <span class="pub-count">5</span></button>
+        </div>
+      </div>
+
+      <!-- Journal Publications -->
+      <div class="publication-section journal wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+        <h3 class="publication-section-title">Referred Journal Publications <span class="pub-count">18</span></h3>
+
+        <!-- Visible Publications (First 6) -->
+        <div class="pub-container">
+          <!-- Publication 1 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2025</span>
+              <h4 class="pub-title">Enhancing Architectural Floorplan Generation with Robust Loss Functions</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Mohd. Mohsin, Manish Raj</p>
+              <p class="pub-journal">The Visual Computer (SCIE, Accepted)</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 3.0</span>
+            </div>
+          </div>
+
+          <!-- Publication 2 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2024</span>
+              <h4 class="pub-title">A novel Blockchain-based authentication scheme for telecare medical information system</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Indushree, M., Raj, M.</p>
+              <p class="pub-journal">J Supercomputer</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 3.3</span>
+              <span class="pub-doi">10.1007/s11227-023-05526-3</span>
+            </div>
+          </div>
+
+          <!-- Publication 3 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2023</span>
+              <h4 class="pub-title">Mobile-Chain: Secure blockchain-based authentication system</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Indushree, M., Raj, M., et al.</p>
+              <p class="pub-journal">Computer Communications, 200:116</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 6.0</span>
+              <span class="pub-doi">10.1007/s11227-023-05526-3</span>
+            </div>
+          </div>
+
+          <!-- Publication 4 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2022</span>
+              <h4 class="pub-title">CloudConsumerism: A Consumer-Centric Ranking Model</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Neeraj, Garg, N., Raj, M., et al.</p>
+              <p class="pub-journal">Mobile Information Systems</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 1.8</span>
+              <span class="pub-doi">10.1155/2022/5960976</span>
+            </div>
+          </div>
+
+          <!-- Publication 5 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2022</span>
+              <h4 class="pub-title">Cross Channel Scripting and Code Injection Attacks</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Indushree, M., Raj, M., et al.</p>
+              <p class="pub-journal">Sensors, 22(5):1959</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 3.7</span>
+              <span class="pub-doi">10.3390/s22051959</span>
+            </div>
+          </div>
+
+          <!-- Publication 6 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2022</span>
+              <h4 class="pub-title">Energy-Efficient Scientific Workflow Scheduling Algorithm</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Garg, N., Neeraj, Raj, M., et al.</p>
+              <p class="pub-journal">Wireless Communications and Mobile Computing</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 2.336</span>
+              <span class="pub-doi">10.1155/2022/1637614</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hidden Publications (Shown on "Show More") -->
+        <div class="pub-container hidden-pubs" id="more-journals">
+          <!-- Publication 7 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2022</span>
+              <h4 class="pub-title">Yoga Pose Estimation and Feedback Generation Using Deep Learning</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Thoutam, V.A., Raj, M., et al.</p>
+              <p class="pub-journal">Computational Intelligence and Neuroscience</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 3.663</span>
+              <span class="pub-doi">10.1155/2022/4311350</span>
+            </div>
+          </div>
+
+          <!-- Publication 8 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2021</span>
+              <h4 class="pub-title">Humanoid Gait Pattern Generation with Orbital Energy</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M., Singh, A.K.</p>
+              <p class="pub-journal">Journal of Circuits, Systems and Computers</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 1.33</span>
+              <span class="pub-doi">10.1142/S0218126621502595</span>
+            </div>
+          </div>
+
+          <!-- Publication 9 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2019</span>
+              <h4 class="pub-title">Multi-objective optimized bipedal locomotion</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M., Semwal, V.B., Nandi, G.C.</p>
+              <p class="pub-journal">Int. J. Mach. Learn. & Cyber., 10:1997-2013</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 4.012</span>
+              <span class="pub-doi">10.1007/s13042-017-0660-1</span>
+            </div>
+          </div>
+
+          <!-- Publication 10 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2019</span>
+              <h4 class="pub-title">Design of optimized multiobjective function for bipedal locomotion</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M., Nandi, G.C.</p>
+              <p class="pub-journal">Journal of Intelligent Systems, 28(1):133-152</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 3.0</span>
+            </div>
+          </div>
+
+          <!-- Publication 11 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2018</span>
+              <h4 class="pub-title">Hybrid model for passive locomotion control of a biped humanoid</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M., Semwal, V.B., Nandi, G.C.</p>
+              <p class="pub-journal">IJIMAI, 5(1):40-46</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 3.137</span>
+              <span class="pub-doi">10.9781/ijimai.2017.10.001</span>
+            </div>
+          </div>
+
+          <!-- Publication 12 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2018</span>
+              <h4 class="pub-title">Bidirectional association of joint angle trajectories for humanoid locomotion</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M., Semwal, V.B., Nandi, G.C.</p>
+              <p class="pub-journal">Neural Comput & Applic, 30:1747-1755</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 5.606</span>
+              <span class="pub-doi">10.1007/s00521-016-2744-3</span>
+            </div>
+          </div>
+
+          <!-- More Publications -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2015</span>
+              <h4 class="pub-title">Biometric gait identification based on a multilayer perceptron</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Semwal, V.B., Raj, M., Nandi, G.C.</p>
+              <p class="pub-journal">Robotics Auton. Syst., 65:65-75</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 3.12</span>
+              <span class="pub-doi">10.1016/j.robot.2014.11.010</span>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2014</span>
+              <h4 class="pub-title">A fault-tolerant mobile computing model based on scalable replica</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Sati, M., Raj, M., et al.</p>
+              <p class="pub-journal">IJIMAI, 2(6):58-68</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 3.137</span>
+              <span class="pub-doi">10.9781/ijimai.2014.267</span>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2012</span>
+              <h4 class="pub-title">ATOM- A Low-Cost Mobile Manipulation Platform for Research and Testing</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M., et al.</p>
+              <p class="pub-journal">International Journal of Applied Information Systems, 4(10):1-7</p>
+            </div>
+            <div class="pub-footer">
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2024</span>
+              <h4 class="pub-title">Machine learning-based Monkey Pox diagnosis: A literature review</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Mohsin Ali, Raj, M.</p>
+              <p class="pub-journal">Biomedical Signal Processing and Control (Accepted)</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-impact">IF: 5.1</span>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2024</span>
+              <h4 class="pub-title">Deep learning approach for predicting monsoon dynamics</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Dash, Y., Raj, M., et al.</p>
+              <p class="pub-journal">Applied Computing and Geosciences, 23:100176</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-doi">10.1016/j.acags.2024.100176</span>
+            </div>
+          </div>
+
+          <div class="pub-card">
+            <div class="pub-header">
+              <span class="pub-year">2024</span>
+              <h4 class="pub-title">Role of artificial intelligence in transmission line protection</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Dash, Y., Raj, M., et al.</p>
+              <p class="pub-journal">International Journal of Hybrid Intelligent Systems, 20(3):185-206</p>
+            </div>
+            <div class="pub-footer">
+              <span class="pub-doi">10.3233/HIS-240016</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <button class="load-more-btn" id="load-more-journals">
+          <i class="fas fa-plus-circle"></i> Show 12 More Journals
+        </button>
+      </div>
+
+      <!-- Conference Publications -->
+      <div class="publication-section conference wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.9s">
+        <h3 class="publication-section-title">Conference Publications <span class="pub-count">22</span></h3>
+
+        <!-- Conference Publications Accordion -->
+        <div class="pub-accordion">
+          <div class="pub-accordion-header" id="conf-header-2024">
+            <h4 class="pub-accordion-title">2024 <span class="pub-count">10</span></h4>
+            <i class="fas fa-chevron-down pub-accordion-icon"></i>
+          </div>
+          <div class="pub-accordion-content" id="conf-content-2024">
+            <div class="pub-container">
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Design and Analysis of Kinematic Model for a 12-DOF Bipedal Robot</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Tiwari, N., Raj, M., et al.</p>
+                  <p class="pub-journal">Global AI Summit</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1109/GlobalAISummit62156.2024.10947807</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Deep Learning-based Noise Reduction using SpeechBrain Toolkit</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Chakraborty, S., Raj, M., et al.</p>
+                  <p class="pub-journal">SSRN</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.2139/ssrn.4929234</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Type-2 Diabetes Mellitus Prediction Through Ensemble Learning</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Katiyar, N., Raj, M., et al.</p>
+                  <p class="pub-journal">ICTIS 2024, Springer</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1007/978-981-97-6675-847</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">A Review on Transformer Models: Applications, Taxonomies, Open Issues</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Passi, N., Raj, M., Shelke, N.A.</p>
+                  <p class="pub-journal">ASIANCON 2024</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1109/ASIANCON62057.2024.10838047</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">A Comparative Analysis of Optimized Routing Protocols</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Ali, M.M., Raj, M.</p>
+                  <p class="pub-journal">ICCCN 2024</p>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Deep Learning-based Noise Reduction using Speech Brain Toolkit</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Ali, M.M., Raj, M., et al.</p>
+                  <p class="pub-journal">ICDAM-2024</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-accordion">
+          <div class="pub-accordion-header" id="conf-header-2023">
+            <h4 class="pub-accordion-title">2023 <span class="pub-count">5</span></h4>
+            <i class="fas fa-chevron-down pub-accordion-icon"></i>
+          </div>
+          <div class="pub-accordion-content" id="conf-content-2023">
+            <div class="pub-container">
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">A Comparative Analysis of Optimised Routing Protocols</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Ali, M.M., Raj, M., et al.</p>
+                  <p class="pub-journal">ICCNet 2023, Manchester Metropolitan University, UK</p>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Semantic Application based on Bhagavad-Gita: A Deep Learning Approach</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Ali, M.M., Raj, M., et al.</p>
+                  <p class="pub-journal">ICCCNet 2023, Manchester Metropolitan University, UK</p>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Automated Lung Cancer Detection Using Lightweight Neural Network</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Ali, M.M., Raj, M.</p>
+                  <p class="pub-journal">MoSICom 2023, BITS Dubai</p>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">FruizNet Using an Efficient Convolution Neural Network</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Ali, M.M., Raj, M., Vatsa, D.</p>
+                  <p class="pub-journal">ICCIKE 2023</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1109/ICCIKE58312.2023.10131865</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Secure User Authentication Protocol for Roaming Services</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Indushree, M., Raj, M.</p>
+                  <p class="pub-journal">ICDSNE 2023, Springer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-accordion">
+          <div class="pub-accordion-header" id="conf-header-2022">
+            <h4 class="pub-accordion-title">2022 <span class="pub-count">2</span></h4>
+            <i class="fas fa-chevron-down pub-accordion-icon"></i>
+          </div>
+          <div class="pub-accordion-content" id="conf-content-2022">
+            <div class="pub-container">
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">A study of Analytics and Exploration of Bitcoin Challenges and Blockchain</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Singh, A.K., Raj, M.</p>
+                  <p class="pub-journal">ICEARS 2022</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1109/ICEARS53579.2022.9751821</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Scientific Exploration of Disease Prevention and Health Promotion</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Singh, A.K., Raj, M.</p>
+                  <p class="pub-journal">ICACCS 2022</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1109/ICACCS54159.2022.9785049</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pub-accordion">
+          <div class="pub-accordion-header" id="conf-header-2021">
+            <h4 class="pub-accordion-title">2021 <span class="pub-count">5</span></h4>
+            <i class="fas fa-chevron-down pub-accordion-icon"></i>
+          </div>
+          <div class="pub-accordion-content" id="conf-content-2021">
+            <div class="pub-container">
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Self-Supervised Planning for Robots using Video Prediction</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Singh, J.P., Raj, M., et al.</p>
+                  <p class="pub-journal">ISCON 2021</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1109/ISCON52037.2021.9702385</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Real-Time Communication based IoT enabled Smart Sewage Workers Safety</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Kumar, A., Raj, M., et al.</p>
+                  <p class="pub-journal">ISCON 2021</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1109/ISCON52037.2021.9702405</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">IoT based Smart Agriculture System</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Singh, A.K., Raj, M., et al.</p>
+                  <p class="pub-journal">ISCON 2021</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1109/ISCON52037.2021.9702478</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">AgriERP Using Salesforce for Cloud Computing</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Singh, A.K., Raj, M., et al.</p>
+                  <p class="pub-journal">Springer</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1007/978-981-15-9647-6_14</span>
+                </div>
+              </div>
+
+              <div class="pub-card">
+                <div class="pub-header">
+                  <h4 class="pub-title">Analytical Survey and Comparative Analysis of Socialized Network</h4>
+                </div>
+                <div class="pub-body">
+                  <p class="pub-authors">Singh, A.K., Raj, M., et al.</p>
+                  <p class="pub-journal">Springer</p>
+                </div>
+                <div class="pub-footer">
+                  <span class="pub-doi">10.1007/</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book Chapters and Other Publications -->
+      <div class="publication-section book wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.1s">
+        <h3 class="publication-section-title">Book Chapters & Other Publications <span class="pub-count">5</span></h3>
+
+        <div class="pub-container">
+          <!-- Book Chapter 1 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <h4 class="pub-title">Data Leakage Detection & Prevention Using Cloud Computing</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Singh, V., Raj, M., et al.</p>
+              <p class="pub-journal">Sustainable Computing: Transforming Industry 4.0 to Society 5.0 (Springer)</p>
+            </div>
+          </div>
+
+          <!-- Book Chapter 2 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <h4 class="pub-title">Intelligent Traffic Management using VANET simulations using 6G</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Mohsin Ali, Raj, M.</p>
+              <p class="pub-journal">Apple Academic Press, CRC Press, T&F Group USA</p>
+            </div>
+          </div>
+
+          <!-- Other Publication 1 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <h4 class="pub-title">Locomotion Control of Biped Humanoid Robot</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M., Nandi, G.C.</p>
+              <p class="pub-journal">Doctoral (PhD) Symposium, Advances in Robotics (AIR2017), IIT Delhi</p>
+            </div>
+          </div>
+
+          <!-- Other Publication 2 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <h4 class="pub-title">The-robot-that-could have-rescued-baby-jessica</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M., Chakraborty, P., Nandi, G.C.</p>
+              <p class="pub-journal">fastcoexist magazine, MIT Press</p>
+            </div>
+          </div>
+
+          <!-- Other Publication 3 -->
+          <div class="pub-card">
+            <div class="pub-header">
+              <h4 class="pub-title">Changing the world with the handshaking of Robotics and AI</h4>
+            </div>
+            <div class="pub-body">
+              <p class="pub-authors">Raj, M.</p>
+              <p class="pub-journal">Education Times, TNN, June 20, 2022</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** End Publications Section ***** -->
+
+  <!-- ***** Patents Section ***** -->
+  <section id="patents" class="patents section bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+          Patents
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          Innovations and Intellectual Property
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="patents-list wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+            <div class="patent-item">
+              <div class="patent-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="patent-content">
+                <h4>Automatic Relaxing Hospital Bed</h4>
+                <p class="patent-status">Design Patent Granted</p>
+                <p class="patent-details">Design No: 371367-001, Date: 23/09/2022</p>
+              </div>
+            </div>
+
+            <div class="patent-item">
+              <div class="patent-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="patent-content">
+                <h4>IoT-Based Virtual Doctor Robot to guide the Medical Process</h4>
+                <p class="patent-status">Patent Application Filed</p>
+                <p class="patent-details">Application No: 202111040501, Journal No. 39/2021/43614</p>
+              </div>
+            </div>
+
+            <div class="patent-item">
+              <div class="patent-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="patent-content">
+                <h4>Stock Market and Trading advanced Algorithmic improvement using Machine learning</h4>
+                <p class="patent-status">Patent Application Filed</p>
+                <p class="patent-details">Application No: 202111041567, Journal No. 40/2021/44897</p>
+              </div>
+            </div>
+
+            <div class="patent-item">
+              <div class="patent-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="patent-content">
+                <h4>Automated Smoking Zone monitoring & direct voice alerting to the user</h4>
+                <p class="patent-status">Patent Application Filed</p>
+                <p class="patent-details">Application No: 202131040003, Journal No. 42/2021/47956</p>
+              </div>
+            </div>
+
+            <div class="patent-item">
+              <div class="patent-icon">
+                <i class="fas fa-certificate"></i>
+              </div>
+              <div class="patent-content">
+                <h4>An IoT-based Smart kettle</h4>
+                <p class="patent-status">Patent Application Filed</p>
+                <p class="patent-details">Application No: 202111050418, Journal No. 46/2021/53610</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consultancy and Industry Workshop -->
+      <div class="row mt-5">
+        <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.9s">
+          <div class="consultancy-card">
+            <h3 class="card-title">Consultancy</h3>
+            <div class="consultancy-item">
+              <h4>Soulverse Inc.</h4>
+              <p class="consultancy-address">7306 Roslindale Trail, Kalamazoo, MI - 49009, USA</p>
+              <p class="consultancy-value">₹4.5 Lakhs (2024–25)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.9s">
+          <div class="workshop-card">
+            <h3 class="card-title">Industry Workshop</h3>
+            <div class="workshop-item">
+              <h4>Advanced Machine Learning Training</h4>
+              <p class="workshop-details">to Samsung Display Employees (2024)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="row mt-5">
+        <div class="col-md-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="1.1s">
+          <div class="projects-card">
+            <h3 class="card-title">Research Projects</h3>
+            <div class="project-item">
+              <h4>SEED Grant from Bennett University</h4>
+              <p class="project-title">"Developing Assistive Humanoid Robot"</p>
+              <p class="project-details">₹9.62 Lakhs, Principal Investigator, Granted</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** End Patents Section ***** -->
+
+  <!-- ***** Teaching Section ***** -->
+  <section id="teaching" class="teaching section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+          Teaching & Mentorship
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          Academic Courses and Student Guidance
+        </p>
+      </div>
+
+      <!-- Teaching Images Gallery -->
+      <div class="row mb-5">
+        <div class="col-md-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          <div class="teaching-image-card">
+            <img src="img/teaching.jpeg" alt="Prof. Manish Raj Teaching" class="img-fluid rounded">
+            <div class="image-overlay">
+              <div class="image-title">Classroom Teaching</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.7s">
+          <div class="teaching-image-card">
+            <img src="img/taking_lectures.jpeg" alt="Prof. Manish Raj Taking Lectures" class="img-fluid rounded">
+            <div class="image-overlay">
+              <div class="image-title">Guest Lecture</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.9s">
+          <div class="teaching-image-card">
+            <img src="img/teaching_bennett.jpeg" alt="Prof. Manish Raj at Bennett University" class="img-fluid rounded">
+            <div class="image-overlay">
+              <div class="image-title">Bennett University</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <!-- Courses Taught -->
+        <div class="col-lg-6 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.7s">
+          <div class="teaching-card">
+            <h3 class="teaching-card-title">
+              <i class="fas fa-chalkboard-teacher"></i> Courses Taught
+            </h3>
+            <div class="table-responsive">
+              <table class="table table-hover courses-table">
+                <thead>
+                  <tr>
+                    <th>Subject</th>
+                    <th>Course Code</th>
+                    <th>Feedback Score</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Advanced Machine Learning</td>
+                    <td>CSET601</td>
+                    <td>9.45</td>
+                  </tr>
+                  <tr>
+                    <td>Artificial Intelligence and Machine Learning</td>
+                    <td>CSET301</td>
+                    <td>9.6</td>
+                  </tr>
+                  <tr>
+                    <td>Digital Design and Computer Organization</td>
+                    <td>BCA101L</td>
+                    <td>9.46</td>
+                  </tr>
+                  <tr>
+                    <td>Microprocessors and Computer Architecture</td>
+                    <td>BCA102L</td>
+                    <td>9.2</td>
+                  </tr>
+                  <tr>
+                    <td>Design and Analysis of Algorithms</td>
+                    <td>BCA209L</td>
+                    <td>9.4</td>
+                  </tr>
+                  <tr>
+                    <td>Data Structure Fundamentals</td>
+                    <td>ECSE281M</td>
+                    <td>9.1</td>
+                  </tr>
+                  <tr>
+                    <td>Digital Design</td>
+                    <td>CSET105</td>
+                    <td>9.24</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Student Guidance -->
+        <div class="col-lg-6 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.7s">
+          <div class="teaching-card">
+            <h3 class="teaching-card-title">
+              <i class="fas fa-user-graduate"></i> Ph.D. Guidance
+            </h3>
+            <div class="guidance-list">
+              <div class="guidance-item">
+                <h4>Indushree M. <span class="guidance-status completed">Awarded</span></h4>
+                <p class="guidance-id">E20SOE815</p>
+                <p class="guidance-topic">"Design of Secure and privacy-preserving Blockchain-based Authentication Protocols for Global Roaming in Mobility Networks"</p>
+              </div>
+
+              <div class="guidance-item">
+                <h4>Chandrashekhar Ram <span class="guidance-status ongoing">Pursuing</span></h4>
+                <p class="guidance-topic">"Dynamic Recalibration and Scalable Modelling Approaches for Time Series Analysis and Forecasting"</p>
+              </div>
+
+              <div class="guidance-item">
+                <h4>Nidhi Passi <span class="guidance-status ongoing">Pursuing</span></h4>
+                <p class="guidance-topic">"Develop an efficient framework for text summarization using large language models"</p>
+              </div>
+
+              <div class="guidance-item">
+                <h4>Mohd. Mohsin <span class="guidance-status ongoing">Pursuing</span></h4>
+                <p class="guidance-topic">"Artificial Intelligence Cross-Domain Detection Model In Agriculture Field And Public Health"</p>
+              </div>
+
+              <div class="guidance-item">
+                <h4>Sudeepta Chauhan <span class="guidance-status ongoing">Pursuing</span></h4>
+                <p class="guidance-topic">"AI in Healthcare"</p>
+              </div>
+
+              <div class="guidance-item">
+                <h4>Amina Farid <span class="guidance-status ongoing">Pursuing</span></h4>
+                <p class="guidance-topic">"AI in Agriculture with SAR images"</p>
+              </div>
+            </div>
+
+            <h3 class="teaching-card-title mt-4">
+              <i class="fas fa-user-tie"></i> Post-Doctoral Guidance
+            </h3>
+            <div class="guidance-list">
+              <div class="guidance-item">
+                <h4>Dr. Mahima Lakira</h4>
+                <p class="guidance-id">Ph.D., IIT Roorkee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Invited Lectures -->
+      <div class="row mt-4">
+        <div class="col-md-12 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.9s">
+          <div class="teaching-card">
+            <h3 class="teaching-card-title">
+              <i class="fas fa-microphone-alt"></i> Invited Expert Lectures
+            </h3>
+            <div class="lectures-list">
+              <div class="lecture-item">
+                <div class="lecture-date">11/01/2023</div>
+                <div class="lecture-content">
+                  <h4>Faculty Development Program on "Artificial Intelligence and Machine Learning Applications"</h4>
+                  <p>REC Unnao</p>
+                </div>
+              </div>
+
+              <div class="lecture-item">
+                <div class="lecture-date">18/03/2022</div>
+                <div class="lecture-content">
+                  <h4>Faculty Development Program on "Industrial Robotics"</h4>
+                  <p>Centre for Advanced Studies (AKTU), Lucknow</p>
+                </div>
+              </div>
+
+              <div class="lecture-item">
+                <div class="lecture-date">25/12/2021</div>
+                <div class="lecture-content">
+                  <h4>One Week Short Term Course on Machine Learning in Different Domains in Engineering</h4>
+                  <p>Dr. B. R. Ambedkar National Institute of Technology, Jalandhar</p>
+                </div>
+              </div>
+
+              <div class="lecture-item">
+                <div class="lecture-date">28/05/2021</div>
+                <div class="lecture-content">
+                  <h4>International Faculty Development Program on "Bridging the gap between Academia and Industry"</h4>
+                  <p>G L Bajaj, Mathura</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** End Teaching Section ***** -->
+
+  <!-- ***** Contact Section ***** -->
+  <section id="contact" class="contact section bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.3s">
+          Contact Me
+        </h2>
+        <p class="section-subtitle wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0.5s">
+          Get in Touch for Collaborations and Inquiries
+        </p>
+      </div>
+
+      <div class="row">
+        <!-- Contact Information -->
+        <div class="col-lg-5 wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.7s">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Address</h4>
+                <p>School of Computer Science Engineering & Technology, Bennett University, Greater Noida</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Email</h4>
+                <p><a href="mailto:manish.raj@bennett.edu.in">manish.raj@bennett.edu.in</a></p>
+                <p><a href="mailto:rajmanish.03@gmail.com">rajmanish.03@gmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Phone</h4>
+                <p><a href="tel:+919026922298">+91-9026922298</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-globe"></i>
+              </div>
+              <div class="contact-text">
+                <h4>Professional Profiles</h4>
+                <p><a href="https://www.linkedin.com/in/manish-raj-64708032/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn Profile</a></p>
+                <p><a href="https://scholar.google.com/citations?hl=en&user=kzhvUmUAAAAJ" target="_blank"><i class="fab fa-google"></i> Google Scholar</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-lg-7 wow fadeInRight" data-wow-duration="1.5s" data-wow-delay="0.7s">
+          <div class="contact-form-card">
+            <h3>Send a Message</h3>
+            <form id="contactForm">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary submit-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** End Contact Section ***** -->
+
+  <!-- ***** Footer ***** -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>&copy; 2024 Prof. Manish Raj. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end">
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/manish-raj-64708032/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+            <a href="https://scholar.google.com/citations?hl=en&user=kzhvUmUAAAAJ" target="_blank" class="social-link"><i class="fab fa-google"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- ***** End Footer ***** -->
+
+  <!-- Back to Top Button -->
+  <button id="backToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- WOW JS for animations -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
